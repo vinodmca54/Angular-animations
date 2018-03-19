@@ -1,0 +1,10 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+<ul>
+  <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+  <li><a routerLink="/signup" routerLinkActive="active">Signup</a></li>
+  <li><a routerLink="/login" routerLinkActive="active">Login</a></li>
+  <li><a routerLink="/videos" routerLinkActive="active">User details</a></li>
+</ul>
+<p [@myanimation]='state' (click)="animateme()">I will animate</p>
+<router-outlet></router-outlet>
