@@ -19,16 +19,20 @@ import { animation } from '@angular/animations/src/animation_metadata';
       state('large',style({
         transform:'scale(1.2)',
       })),
-      transition('small <=> large',animate('300ms ease-in',style({
-        transform:'translateY(40px)'
-      }))),
+      state('extralarge',style({
+        transform:'scale(2)',
+      })),
+      // transition('small <=> large',animate('300ms ease-in',style({
+      //   transform:'translateY(40px)'
+      // }))),
+      transition(`* => *`, animate('500ms')),
     ]),
   ]
 })
 export class AppComponent {
   title = 'app';
 
-  state : string = 'small';
+  state : string = 'extralarge';
 
   animateme(){
     this.state = (this.state === 'small'? 'large': 'small');
